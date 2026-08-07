@@ -1,0 +1,427 @@
+h1{
+    width: 75vw;
+    background-color: burlywood;
+
+    color:rgb(7, 0, 2);
+    padding: 5px, auto;
+    border: 4px solid red;
+    text-align: center;
+    text-decoration: dotted;
+    display: flex;
+}
+body {
+   width: 100%;
+   margin: 0 auto;
+   
+  background-color: #ff9500;
+  
+  
+  text-align: center;
+    max-width: 100%;
+}
+
+pre{
+  display:inline-block;
+  margin: 2px, auto;
+  max-width: 100%;
+  position: relative;
+  text-align: center;
+}
+button {
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 2px solid rgb(200 200 0 / 60%);
+  background-color: rgb(0 217 217 / 60%);
+  color: rgb(100 0 0 / 100%);
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 40%);
+  border-radius: 10px;
+  padding: 3px 10px;
+  cursor: pointer;
+}
+.kavitastyle{
+  text-align: left;
+  background-color: bisque;
+  color: darkcyan;
+}
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #1e1e1e;
+    font-family: sans-serif;
+    color: #a0a0a0;
+    line-height: 1.6;
+}
+
+.main-container {
+    display : grid;
+    min-width: 1200px;
+    grid-template-columns: 350px 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    margin: auto;
+}
+
+.sidebar {
+    height: 90vh;
+    background-color: #2a2a2a;
+}
+
+.main-containt {
+    height: 90vh;
+    background-color: #2a2a2a;
+    
+} */
+  
+ /* =======================================================
+   1. VARIABLES (Website ki Color Theme aur Fonts)
+======================================================== */
+/* :root {
+    --primary-color: #2563eb;       /* Main Blue color (Buttons, Links ke liye) */
+    --primary-hover: #1d4ed8;       /* Hover karne par thoda dark blue */
+    --bg-color: #f8fafc;            /* Website ka background (Halka grayish white) */
+    --text-main: #0f172a;           /* Main headings ka color (Dark blue/black) */
+    --text-muted: #64748b;          /* Paragraphs ka color (Halka grey) */
+    --card-bg: #ffffff;             /* Cards aur form ka background (Pure white) */
+    --transition: all 0.3s ease;    /* Hover effects ko smooth karne ke liye */
+} */
+
+/* =======================================================
+   2. CSS RESET (Browser ki default margin/padding hatana)
+======================================================== */
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} */
+
+/* Smooth scrolling - Menu link pe click karne pe aaram se slide hoga */
+/* html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-muted);
+    line-height: 1.6;
+} 
+
+a {
+    text-decoration: none; /* Links ke neeche ki line hatane ke liye */
+    color: inherit;
+}
+
+li {
+    list-style: none; /* List ke aage ke dots (bullets) hatane ke liye */
+}
+ */ 
+
+/* Container: Content ko center mein rakhne aur zyada failne se rokne ke liye */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto; /* Left-Right margin auto karke center kiya */
+}
+
+/* Section ki upari aur nichli doori (Padding) */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    color: var(--text-main);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* =======================================================
+   3. HEADER & NAVBAR (Flexbox ka use)
+======================================================== */
+.header {
+    background-color: var(--card-bg);
+    position: sticky; /* Scroll karne par menu upar chipka rahega */
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1); /* Halki si parchai (shadow) */
+}
+
+.header h1 {
+    display: none; /* HTML mein h1 aur .logo dono same hain, isliye ek ko chhupa diya */
+}
+
+.navbar {
+    display: flex; /* Logo aur Menu ko ek line me lane ke liye */
+    justify-content: space-between; /* Dono ke beech me maximum doori */
+    align-items: center; /* Upar-neeche se center karna */
+    padding: 20px 5%;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-list {
+    display: flex; /* Menu items ko ek line me karna */
+    gap: 30px;     /* Menu items ke beech ki doori */
+}
+
+.nav-link {
+    color: var(--text-main);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-link:hover {
+    color: var(--primary-color); /* Hover par blue color */
+}
+
+.menu-toggle {
+    display: none; /* Mobile button abhi chhupaya hai, ye responsive.css mein dikhega */
+}
+
+/* =======================================================
+   4. HERO SECTION (Flexbox ka dusra kamaal)
+======================================================== */
+.hero .container {
+    display: flex; /* Text aur Image ko aamne-saamne rakhna */
+    align-items: center;
+    justify-content: space-between;
+    min-height: 80vh; /* Screen ki 80% height capture karega */
+}
+
+.hero-content {
+    flex: 1; /* Aadhi jagah content ko di */
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.hero-title {
+    font-size: 4rem;
+    color: var(--text-main);
+    margin: 10px 0;
+}
+
+.hero-role {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 500px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 30px;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: var(--transition);
+    border: 2px solid var(--primary-color);
+}
+
+.btn:hover {
+    background-color: transparent; /* Hover pe button khali (transparent) ho jayega */
+    color: var(--primary-color);
+}
+
+.hero-image {
+    flex: 1; /* Aadhi jagah image ko di */
+    text-align: right;
+}
+
+.hero-image img {
+    max-width: 100%;
+    width: 400px;
+    border-radius: 50%; /* Photo ko gol (circular) banane ke liye */
+    border: 5px solid var(--primary-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* =======================================================
+   5. ABOUT SECTION
+======================================================== */
+.about-description {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    font-size: 1.1rem;
+}
+
+.about-details {
+    text-align: center;
+    font-style: normal;
+    background: var(--card-bg);
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 400px;
+    margin: 0 auto;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+/* =======================================================
+   6. SKILLS SECTION (CSS Grid ka Jaal)
+======================================================== */
+.skill-grid {
+    display: grid;
+    /* Ye ek jaadu hai: Screen size ke hisaab se khud column banayega, minimum 150px chouda */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+}
+
+.skill-grid article {
+    background-color: var(--card-bg);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.skill-grid article:hover {
+    transform: translateY(-5px); /* Hover karne pe card halka sa upar uthega */
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+}
+
+.skill-grid h3 {
+    color: var(--primary-color);
+}
+
+/* =======================================================
+   7. PROJECTS & EDUCATION (CSS Grid)
+======================================================== */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Bade cards, minimum 300px width */
+    gap: 30px;
+}
+
+.project-card, .education-card {
+    background-color: var(--card-bg);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: var(--transition);
+}
+
+.project-card:hover, .education-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-card h3 {
+    color: var(--text-main);
+    margin: 15px 0 10px 0;
+}
+
+.project-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.project-links a {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.project-links a:hover {
+    text-decoration: underline;
+}
+
+/* =======================================================
+   8. CONTACT FORM (Flexbox Column)
+======================================================== */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: var(--card-bg);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column; /* Sabhi cheezon ko ek ke neeche ek rakhna */
+}
+
+.contact-form label {
+    font-weight: bold;
+    color: var(--text-main);
+    margin-bottom: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit; /* Jo font website ka hai wahi form me use ho */
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-color); /* Type karte waqt border blue ho jayega */
+}
+
+.contact-form button {
+    padding: 15px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.contact-form button:hover {
+    background-color: var(--primary-hover);
+}
+
+/* =======================================================
+   9. FOOTER
+======================================================== */
+.footer {
+    background-color: var(--text-main);
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #cbd5e1;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+ */
