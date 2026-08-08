@@ -234,7 +234,8 @@ html {
 
  }
  .hero-description {
-    min-width: 600px;
+    min-width: 380px;
+    overflow-x: hidden;  
     margin-bottom: 2rem;
     columns: var(--color-gray);
     font-size: 1rem;
