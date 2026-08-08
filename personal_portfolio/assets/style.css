@@ -611,3 +611,11 @@ html {
 .back-to-top:hover{
     color:var(--color-primary);
 }
+
+.footer-social img {
+    width: 70px;
+    height: 70px;
+    margin-inline: auto;
+    margin-bottom: 1.5rem;
+    object-fit: contain;
+}
